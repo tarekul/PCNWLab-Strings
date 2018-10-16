@@ -15,6 +15,12 @@
     @example - makeEven('taq');  // 'taq#'
     @example - makeEven('john'); // 'john'
 */
+makeEven = (str) => {
+    if(str.length % 2 != 0) return str + '#'
+    return str
+}
+console.log(makeEven('taq'))
+console.log(makeEven('islamT'))
 
 
 /* 2
@@ -24,7 +30,10 @@
     @desc - return the last character in string
     @example - getLastChar('taq'); // 'q'
 */
-
+console.log('-------------------')
+console.log('getlastchar function')
+getLastChar = (str) => str[str.length-1]
+console.log(getLastChar('taq'))
 /* 3
     @func get3rdChar
     @param {string} str
@@ -33,7 +42,16 @@
     @example - get3rdChar('taq'); // 'q'
     @example - get3rdChar('mo'); // 'not enough characters!'
 */
+console.log('-------------------')
 
+const get3rdChar = (str) => {
+    if(str.length < 3){
+        return 'not enough characters'
+    }
+    return str[2]
+    
+}
+console.log(get3rdChar('mo'))
 /* 4
     @func get3rdCharFromEnd
     @param {string} str
@@ -43,7 +61,18 @@
     @example - get3rdCharFromEnd('mo'); // 'not enough characters!'
     @example - get3rdCharFromEnd('taq karim'); // 'r'
 */
+console.log('-------------------')
+const get3rdCharFromEnd = (str) => {
+    if(str.length < 3){
+        return 'not enough characters'
+    }
+    return str.substr(str.length-3,1)
+    
+}
 
+console.log(get3rdCharFromEnd("tarekul"))
+
+console.log('-------------------')
 /* 5
     @func startsWithVowel
     @param {string} str
@@ -54,6 +83,17 @@
     @example - startsWithVowel('andy'); // true
     @example - startsWithVowel('Andy'); // true
 */
+function startsWithVowel(str){
+    switch(str[0]){
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            return true
+        return false    
+    }
+}
 
 /* 6
     @func endsWithVowel
